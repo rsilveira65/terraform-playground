@@ -3,10 +3,10 @@
 docker build ./application -t rsilveira65/hearst_tha:1.1 
 ```
 
-````
+```
 docker run -i rsilveira65/hearst_tha npm test
 ```
-
+```
 helm upgrade -f hearst_tha/values.yaml hearst_tha ./hearst_tha --install
 ```
 
