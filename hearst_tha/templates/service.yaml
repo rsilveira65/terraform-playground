@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hearst_tha.fullname" . }}
+  labels:
+    {{- include "hearst_tha.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+  selector:
+    {{- include "hearst_tha.selectorLabels" . | nindent 4 }}
