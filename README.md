@@ -40,3 +40,8 @@ Apply terraform changes if any tf file has updated in the infrastructure folder.
 
 ### [Deploy](.github/workflows/deploy.yaml)
 Apply the application Helm chart to the Kubernetes cluster.
+
+
+## TODO
+- Implement Cache using Redis
+- Create ElastiCache/Redis IaC for the application
