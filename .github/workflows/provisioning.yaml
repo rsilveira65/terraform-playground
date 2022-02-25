@@ -1,0 +1,50 @@
+on:
+  push:
+    branches: [master]
+name: "Apply Infrastructure"
+
+jobs:
+  check:
+    name: Check infra files
+    outputs:
+      run_job: ${{ steps.check_infra_files.outputs.run_job }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Check modified files
+        id: check_infra_files
+        run: |
+          echo "=============== list modified files ==============="
+          git diff --name-only HEAD^ HEAD
+          
+          echo "========== check paths of modified files =========="
+          git diff --name-only HEAD^ HEAD > files.txt
+          while IFS= read -r file
+          do
+            echo $file
+            if [[ $file != infrastructure/* ]]; then
+              echo "This modified file is not under the 'infrastructure' folder."
+              echo "::set-output name=run_job::false"
+              break
+            else
+              echo "::set-output name=run_job::true"
+            fi
+          done < files.txt
+  provisioning_ifrastructure:
+    name: Apply Infrastructure #https://github.com/marketplace/actions/terraform-apply
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: terraform apply
+        uses: dflook/terraform-apply@v1
+        with:
+          path: infrastructure
+          auto_approve: true
+          var_file: |
+            prod.tfvars
+          backend_config: | 
+            token=${{ secrets.BACKEND_TOKEN }}
