@@ -17,6 +17,9 @@ jobs:
       - name: install dependences
         working-directory: ./application
         run: npm install
+      - name: run linter
+        working-directory: ./application
+        run: npm run lint
       - name: run tests
         working-directory: ./application
         run: npm test
