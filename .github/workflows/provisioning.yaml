@@ -1,8 +1,7 @@
+name: "Apply Infrastructure"
 on:
   push:
     branches: [master]
-name: "Apply Infrastructure"
-
 jobs:
   check:
     name: Check infra files

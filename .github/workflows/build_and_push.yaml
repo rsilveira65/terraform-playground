@@ -1,11 +1,10 @@
+name: Build and Publish
 on:
   workflow_run:
     workflows: ["Run Tests"]
     branches: [master]
     types: 
       - completed
-
-name: Build and Publish
 
 jobs:
   build-and-push-docker-image:
