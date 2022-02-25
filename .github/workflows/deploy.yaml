@@ -6,8 +6,6 @@ on:
         description: 'Version'     
         required: true
         default: 'latest'
-      tags:
-        description: 'Test scenario tags' 
    
 
 jobs:
