@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install --unsafe-perm --allow-root
+RUN npm install
 
 COPY . .
 
