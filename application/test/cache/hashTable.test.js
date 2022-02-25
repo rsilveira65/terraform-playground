@@ -2,7 +2,7 @@
 
 const chai = require('chai');
 const expect = chai.expect;
-const HashTable = require('../../cache/hashTable');
+const HashTable = require('../../cache/hashtable');
 
 describe('Testing HashTable class', () => {
 	it('Should retrurn persisted cache', () => {
