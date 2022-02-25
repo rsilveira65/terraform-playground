@@ -1,7 +1,7 @@
 [![Run Tests](https://github.com/rsilveira65/terraform-playground/actions/workflows/run_linter_and_tests.yaml/badge.svg)](https://github.com/rsilveira65/terraform-playground/actions/workflows/run_linter_and_tests.yaml) [![Build and Publish](https://github.com/rsilveira65/terraform-playground/actions/workflows/build_and_push.yaml/badge.svg)](https://github.com/rsilveira65/terraform-playground/actions/workflows/build_and_push.yaml)
 
 ## Folder Structure
-### [application](.github/application/README.md)
+### [application](application/README.md)
 Application developed using NodeJS that calculates if a number is prime or not.
 #### Stack: 
 - [NodeJS](https://nodejs.org/en/)
@@ -11,14 +11,14 @@ Application developed using NodeJS that calculates if a number is prime or not.
 - [Mocha](https://mochajs.org/)
 - [EsLint](https://eslint.org/)
 
-### [infrastructure](.github/infrastructure/README.md)
+### [infrastructure](infrastructure/README.md)
 IaC for infrastructure provisioning.
 #### Stack: 
 - [Terraform](https://www.terraform.io/)
 - [Terraform Provider AWS](https://www.terraform.io/docs/providers/aws/)
 - [EKS Fargate](https://docs.aws.amazon.com/eks/latest/userguide/fargate-platform-image.html)
 
-### [hearst_tha](.github/hearst_tha/README.md)
+### [hearst_tha](hearst_tha/README.md)
 Helm Chart that deploys the application in the EKS cluster.
 
 
