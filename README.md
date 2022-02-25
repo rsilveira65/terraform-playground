@@ -12,7 +12,7 @@ Application developed using NodeJS that calculates if a number is prime or not.
 - [EsLint](https://eslint.org/)
 
 ### [infrastructure](.github/infrastructure/README.md)
-Infrastructure as Code that contains the infrastructure of the application.
+IaC for infrastructure provisioning.
 #### Stack: 
 - [Terraform](https://www.terraform.io/)
 - [Terraform Provider AWS](https://www.terraform.io/docs/providers/aws/)
