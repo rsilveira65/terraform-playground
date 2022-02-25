@@ -1,3 +1,4 @@
+[![Run Tests](https://github.com/rsilveira65/terraform-playground/actions/workflows/run_tests.yaml/badge.svg)](https://github.com/rsilveira65/terraform-playground/actions/workflows/run_tests.yaml)
 
 ```
 docker build ./application -t rsilveira65/hearst_tha:1.1 
