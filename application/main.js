@@ -3,6 +3,7 @@ const promMid = require('express-prometheus-middleware');
 const Prime = require('./prime/prime');
 const HashMap = require('./cache/hashtable');
 const hashtable = new HashMap();
+const process = require('process');
 
 const app = express()
 const port = 80
