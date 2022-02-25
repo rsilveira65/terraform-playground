@@ -21,13 +21,6 @@ IaC for infrastructure provisioning.
 ### [hearst_tha](hearst_tha/README.md)
 Helm Chart that deploys the application in the EKS cluster.
 
-
-## Architecture Diagram
-TODO
-
-## CI/CD Diagram
-TODO
-
 ## Workflows
 ### [Build and Push](.github/workflows/build_and_push.yaml)
 Build the application artifact and push it to the [Docker Hub registry](https://hub.docker.com/r/rsilveira65/hearst_tha).
