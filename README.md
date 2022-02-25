@@ -7,7 +7,7 @@ TODO
 
 ## Workflows
 ### [Build and Push](.github/workflows/build_and_push.yaml)
-Build the application artifact and push it to the Docker Hub registry.
+Build the application artifact and push it to the [Docker Hub registry](https://hub.docker.com/r/rsilveira65/hearst_tha).
 
 ### [Lint and Test](.github/workflows/run_linter_and_tests.yaml)
 Apply the linter and run the tests. Uses ESLint and Mocha.
