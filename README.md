@@ -16,7 +16,7 @@ IaC for infrastructure provisioning.
 #### Stack: 
 - [Terraform](https://www.terraform.io/)
 - [Terraform Provider AWS](https://www.terraform.io/docs/providers/aws/)
-- [EKS Fargate](https://docs.aws.amazon.com/eks/latest/userguide/fargate-platform-image.html)
+- [EKS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster)
 
 ### [hearst_tha](hearst_tha/README.md)
 Helm Chart that deploys the application in the EKS cluster.
